@@ -1,4 +1,4 @@
-module plugin
+module github.com/gmlike/xorm_plugin
 
 go 1.15
 
