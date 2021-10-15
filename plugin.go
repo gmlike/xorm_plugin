@@ -1,4 +1,4 @@
-package  xorm_plugin
+package xorm_plugin
 
 import (
 	"errors"
@@ -114,6 +114,11 @@ func (t *TableStruct) EnableJsonTag(p bool) *TableStruct {
 	return t
 }
 
+func (t *TableStruct) RealNameMethod(r string) *TableStruct {
+	t.realNameMethod = r
+	return t
+}
+
 func (t *TableStruct) DateToTime(d bool) *TableStruct {
 	t.dateToTime = d
 	return t
@@ -183,7 +188,6 @@ func (t *TableStruct) Run() error {
 	}
 	// 包名
 	var packageName = "package model\n\n"
-
 
 	filePath := fmt.Sprintf("%s", savePath)
 	f, err := os.Create(filePath)
