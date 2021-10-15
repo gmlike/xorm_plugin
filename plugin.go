@@ -1,4 +1,4 @@
-package  xrom_plugin
+package  plugin
 
 import (
 	"errors"
