@@ -1,4 +1,4 @@
-package  plugin
+package  xorm_plugin
 
 import (
 	"errors"
